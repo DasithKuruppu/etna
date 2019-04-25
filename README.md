@@ -1,4 +1,3 @@
-# Matterhorn 🏔
 
 An API Boilerplate project built with Node.js and Typescript.
 
@@ -11,10 +10,9 @@ An API Boilerplate project built with Node.js and Typescript.
 
 ## Quick Start
 1. 🍴 Fork the repository
-2. 👯‍♀️ Clone it to your computer 
-3. 🏃‍♀️ Run npm run install && npm run dev
-4. 📝 Edit any of the files in src/
-5. 👀 Watch as the app magically rebuilds and relaunches itself
+1. 👯‍♀️ Clone it to your computer 
+2. 🏃‍♀️ Run npm install
+3. 🏃‍♀️ npm run dev
 
 ## Scripts
 
@@ -40,15 +38,6 @@ Matterhorn implements example usage of both command line arguments and environme
 
 Environment variables work in a similar way to command line arguments. They can be set in multiple ways depending on the terminal and operating system you are using. In a bash terminal you can specify environment variables as you use any of the above mentioned scripts by prepending the assignment to the command. For example, this project has the *PORT* environment variable enabled. In a bash terminal run `PORT=8080 npm run start` to run the API on port 8080.
 
-## Contributing
-
-Open an **issue** if you'd like to report a bug or a feature. Make sure to write a detailed description and indicate if you will or will not be resolving the issue yourself.
-
-If you are interested in contributing make sure to follow these practices:
-- Prepend branches with `fix/`, `feature/`, or `docs/` depending on the change being made
-- NPM commands `test`, `lint`, and `build` run without failing. 
-- If you are solving an open issue, reference it in the Pull Request description using `Ref #<issue number>`.
-
 ## Jest
 
 Matterhorn has a unique Jest set up. Under the [`jest/`](./jest) directory there are three configuration files [`ci.config.json`](./jest/ci.config.json), [`coverage.config.json`](./jest/coverage.config.json), and [`test.config.json`](./jest/test.config.json). Each configuration file maps to a specific jest experience.
@@ -66,8 +55,3 @@ Runs jest with the `coverage.config.json` configuration. It runs the same test s
 Runs jest with the `ci.config.json` configuration. It runs the same test suite as `npm run test` and collects coverage similar to the `npm run coverage` command, but utilizes jest's built in `ci` caching functionality. Additionally, it outputs the coverage in the following formats: `html`, `json`, and `cobertura`. It utilizes `jest-junit` reporter to generate compatible junit xml files for Azure DevOps test reporting, and the `cobertura` format for the code coverage reporting.
 
 <hr>
-
-### Maintainers
-🦉 Ethan Arrowood _Original Author_ - Follow on: Twitter [@ArrowoodTech](https://twitter.com/arrowoodtech) & GitHub [@Ethan-Arrowood](https://github.com/Ethan-Arrowood/)
-
-🚀 Alyssa Cooper _Maintainer_ - Follow on: Twitter [@ayecoops](https://twitter.com/ayecoops) & GitHub [@Alyssa-Cooper](https://github.com/Alyssa-Cooper/)
