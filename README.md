@@ -1,4 +1,4 @@
-An API Boilerplate project built with Node.js and Typescript.
+An API Boilerplate project built with Node.js and Typescript, originally forked from https://github.com/MatterhornDev/matterhorn
 
 - ⏱ Runtime: [Node.js](https://nodejs.org/en/)
 - 🖥 API Framework: [Fastify](https://www.fastify.io/)
