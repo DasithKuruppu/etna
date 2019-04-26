@@ -1,6 +1,6 @@
 # Introducing - Etna 🌋
 
-An _opinionated_ API Boilerplate project built with [Node.js](https://nodejs.org/en/), [TypeScript](https://www.typescriptlang.org/) , [objectionjs](https://vincit.github.io/objection.js/), [Knexjs](https://knexjs.org/) - originally forked and buit on top of [Matterhorn](https://github.com/MatterhornDev/matterhorn) 🏔️
+An _opinionated_ API Boilerplate project built with [Node.js](https://nodejs.org/en/), [TypeScript](https://www.typescriptlang.org/) , [objectionjs](https://vincit.github.io/objection.js/), [Knexjs](https://knexjs.org/) - Inspired by and built on top of [Matterhorn](https://github.com/MatterhornDev/matterhorn) 🏔️
 
 - ⏱ Runtime: [Node.js](https://nodejs.org/en/)
 - 🖥 API Framework: [Fastify](https://www.fastify.io/)
