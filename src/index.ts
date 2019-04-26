@@ -1,4 +1,3 @@
-require("custom-env").env(true);
 import * as yargsParser from "yargs-parser";
 import createServer from "./server";
 import { initializeDB } from "./database";

@@ -1,4 +1,7 @@
+
 import { containsOperators } from "../../../src/routes/candidates/handler";
+
+
 describe("Should test containsOperators function", () => {
   test("Should contain an operator >", () => {
     const result = containsOperators(

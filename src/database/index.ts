@@ -11,16 +11,18 @@ const connection = createConnection({
   database: process.env.DATABASE_NAME
 });
 
-connection.migrate.latest();
 Model.knex(connection);
 
-export async function initializeDB(config?:any) {
-
+export async function initializeDB(config?: any) {
   if (!isDbInit) {
-    if(config){
-      
+    if (config) {
+      const con = createConnection(config);
+      Model.knex(con);
+      connection.migrate.latest();
+    } else {
+      Model.knex(connection);
+      connection.migrate.latest();
     }
-    Model.knex(connection);
     isDbInit = true;
   }
 }
