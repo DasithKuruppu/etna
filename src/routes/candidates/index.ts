@@ -45,4 +45,5 @@ export function registerCandidatesRoutes(fastify: FastifyInstance): void {
       reply.send([]);
     }
   });
+  
 }

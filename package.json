@@ -48,8 +48,7 @@
     "fastify-swagger": "^2.3.2",
     "knex": "^0.16.5",
     "mysql": "^2.17.1",
-    "objection": "^1.6.8",
-    "uuid": "^3.3.2"
+    "objection": "^1.6.8"
   },
   "jest-junit": {
     "outputDirectory": "coverage"
