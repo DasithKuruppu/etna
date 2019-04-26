@@ -1,5 +1,5 @@
 {
-  "name": "candidate-app",
+  "name": "etna",
   "version": "1.0.0",
   "description": "with Node.js and Typescript",
   "scripts": {
@@ -18,8 +18,7 @@
     "test": "jest --config jest/test.config.json --setupFiles dotenv/config",
     "test:ci": "jest --ci --config jest/ci.config.json"
   },
-  "author": "Ethan Arrowood",
-  "license": "MIT",
+  "author": "dasith kuruppu",
   "devDependencies": {
     "@types/jest": "^23.3.14",
     "@types/node": "^10.14.4",

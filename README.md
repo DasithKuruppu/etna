@@ -1,28 +1,56 @@
-An API Boilerplate project built with Node.js and Typescript, originally forked from https://github.com/MatterhornDev/matterhorn
+# Introducing - Etna 🌋
+
+An _opinionated_ API Boilerplate project built with [Node.js](https://nodejs.org/en/), [TypeScript](https://www.typescriptlang.org/) , [objectionjs](https://vincit.github.io/objection.js/), [Knexjs](https://knexjs.org/) - originally forked and buit on top of [Matterhorn](https://github.com/MatterhornDev/matterhorn) 🏔️
 
 - ⏱ Runtime: [Node.js](https://nodejs.org/en/)
 - 🖥 API Framework: [Fastify](https://www.fastify.io/)
 - 🔏 Type System: [TypeScript](https://www.typescriptlang.org/)
+- 📎 ORM: [objectionjs](https://vincit.github.io/objection.js/)
+- ❔ QueryBuilder: [Knexjs](https://knexjs.org/)
+- 🗃️ Databases: Any or all of Postgres, MSSQL, MySQL, MariaDB, SQLite3, Oracle, and Amazon Redshift
 - 🧪 Test Runner: [Jest](https://jestjs.io/)
 - 👕 Linter: [ESLint](https://eslint.org/)
-- 📦 Continuous Integration: [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/)
 
 ## Quick Start
 
 1. 🍴 Fork the repository
-1. 👯‍♀️ Clone it to your computer
-1. 🏃‍♀️ Run npm install
-1. 🏃‍♀️ npm run dev
+2. 👯‍♀️ Clone it to your computer
+3. 🏃‍♀️ `npm install`
+4. 🏃‍♀️ `npm run dev`
 
-## features
+## Features
 
 1. Supports authentication with jwt.
-2. An ORM for SQL
-3. Query builder
-4. Restful api - Routes:
+2. Abstraction for the persistance layer(Postgres, MSSQL, MySQL, MariaDB, SQLite3, Oracle, and Amazon Redshift) with Object Relational Mapping(ORM).
+3. Abstraction layer for querys using a powerful query builder - [Knexjs](https://knexjs.org/)
+4. Tests using [Jest](https://jestjs.io/)
+5. Restful api - Sample Routes:
    1. Add candidates.
    2. Query candidates.
    3. Get distinct list of technologies.
+
+## Project structure
+
+```
+📂 jest
+📂 migrations
+📂 src
+ |--📂 database
+    |-- 📄 index
+ |--📂 models
+    |-- 📂 modelName
+        |-- index
+ |--📂 plugins
+ |--📂 routes
+    |-- 📂 routePathName
+        |-- 📄 index
+        |-- 📄 handler
+📂tests
+    |--📂 routes
+        |-- 📂 routePathName
+            |-- 📄 index
+            |-- 📄 handler
+```
 
 ## Scripts
 
@@ -44,13 +72,13 @@ The following npm scripts can be run using `npm run <script>`. This project reli
 
 ## Command Line Arguments & Environment Variables
 
-Matterhorn implements example usage of both command line arguments and environment variables. It uses `yargs-parser` to manage command line arguments. Command line arguments are passed in through the start command: `node lib/index.js <command line arguments>`. The `--log` argument has been enabled as an example. Running `npm run start` starts up the project without any command line arguments. This command is intended to be used in production, so logging is disabled by default (i.e. we don't pass the `--log` argument). If you are using this command to test your code locally and want to see the logging output, then run `npm run start -- --log`. This passes the command line argument through npm and into the aliased command.
+Etna implements example usage of both command line arguments and environment variables. It uses `yargs-parser` to manage command line arguments. Command line arguments are passed in through the start command: `node lib/index.js <command line arguments>`. The `--log` argument has been enabled as an example. Additionally it also uses the .env arguments specified on `.env` file by using [dotenv](https://github.com/motdotla/dotenv). Running `npm run start` starts up the project without any command line arguments. This command is intended to be used in production, so logging is disabled by default (i.e. we don't pass the `--log` argument). If you are using this command to test your code locally and want to see the logging output, then run `npm run start -- --log`. This passes the command line argument through npm and into the aliased command.
 
 Environment variables work in a similar way to command line arguments. They can be set in multiple ways depending on the terminal and operating system you are using. In a bash terminal you can specify environment variables as you use any of the above mentioned scripts by prepending the assignment to the command. For example, this project has the _PORT_ environment variable enabled. In a bash terminal run `PORT=8080 npm run start` to run the API on port 8080.
 
 ## Jest
 
-Matterhorn has a unique Jest set up. Under the [`jest/`](./jest) directory there are three configuration files [`ci.config.json`](./jest/ci.config.json), [`coverage.config.json`](./jest/coverage.config.json), and [`test.config.json`](./jest/test.config.json). Each configuration file maps to a specific jest experience.
+Etna has a unique Jest set up. Under the [`jest/`](./jest) directory there are three configuration files [`ci.config.json`](./jest/ci.config.json), [`coverage.config.json`](./jest/coverage.config.json), and [`test.config.json`](./jest/test.config.json). Each configuration file maps to a specific jest experience.
 
 #### npm run test
 
