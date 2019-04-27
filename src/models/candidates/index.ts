@@ -10,6 +10,7 @@ export class Candidate extends Model {
   address?: string;
   createdAt?: Date;
   updatedAt?: Date;
+  
   static get tableName() {
     return "candidate";
   }

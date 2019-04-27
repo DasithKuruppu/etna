@@ -1,0 +1,55 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- master
+- greenkeeper/*
+
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '11.x'
+  displayName: 'Install Node.js'
+
+- task: Npm@1
+  inputs:
+    command: custom
+    customCommand: 'run install:ci'
+  displayName: 'npm run install:ci'
+
+- task: Npm@1
+  inputs:
+    command: custom
+    customCommand: 'run lint'
+  displayName: 'npm run lint'
+
+- task: Npm@1
+  inputs:
+    command: custom
+    customCommand: 'run test:ci'
+  displayName: 'npm run test:ci'
+
+- task: PublishTestResults@2
+  condition: succeededOrFailed()
+  inputs:
+    testRunner: JUnit
+    testResultsFiles: '$(System.DefaultWorkingDirectory)/coverage/junit.xml'
+  displayName: 'Publish Test Results'
+
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: Cobertura
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage/cobertura-coverage.xml'
+    reportDirectory: '$(System.DefaultWorkingDirectory)/coverage'
+  displayName: 'Publish Code Coverage'
+
+- task: Npm@1
+  inputs:
+    command: custom
+    customCommand: 'run build'
+  displayName: 'npm run build'

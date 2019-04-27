@@ -7,8 +7,8 @@ An _opinionated_ API Boilerplate project built with [Node.js](https://nodejs.org
 - 🔏 Type System: [TypeScript](https://www.typescriptlang.org/)
 - 📎 ORM: [objectionjs](https://vincit.github.io/objection.js/)
 - ❔ QueryBuilder: [Knexjs](https://knexjs.org/)
-- 🗃️ Databases: Any or all of Postgres, MSSQL, MySQL, MariaDB, SQLite3, Oracle, and Amazon Redshift
-- 🧪 Test Runner: [Jest](https://jestjs.io/)
+- 🗃️ Databases: RDMS (Relational database management system)
+- 🎭 Test Runner: [Jest](https://jestjs.io/)
 - 👕 Linter: [ESLint](https://eslint.org/)
 
 ## Quick Start
@@ -31,11 +31,13 @@ An _opinionated_ API Boilerplate project built with [Node.js](https://nodejs.org
 
 ## Project structure
 
+
 ```
 📂 jest
 📂 migrations
 📂 src
  |--📂 database
+    |-- 📄 connect
     |-- 📄 index
  |--📂 models
     |-- 📂 modelName
@@ -45,6 +47,8 @@ An _opinionated_ API Boilerplate project built with [Node.js](https://nodejs.org
     |-- 📂 routePathName
         |-- 📄 index
         |-- 📄 handler
+ |-- 📄 index
+ |-- 📄 server
 📂tests
     |--📂 routes
         |-- 📂 routePathName
