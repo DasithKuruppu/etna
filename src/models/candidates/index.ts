@@ -1,5 +1,4 @@
 import { Model } from "objection";
-import { interfaceAddress } from "../interfaces";
 import { Skill } from "../skills";
 import { toDate, toTime } from "../utils";
 
@@ -8,7 +7,7 @@ export class Candidate extends Model {
   firstName!: string;
   lastName!: string;
   contactNumber!: string;
-  address?: interfaceAddress;
+  address?: string;
   createdAt?: Date;
   updatedAt?: Date;
   static get tableName() {
