@@ -2,6 +2,8 @@
 
 An _opinionated_ API Boilerplate project built with [Node.js](https://nodejs.org/en/), [TypeScript](https://www.typescriptlang.org/) , [objectionjs](https://vincit.github.io/objection.js/), [Knexjs](https://knexjs.org/) - Inspired by and built on top of [Matterhorn](https://github.com/MatterhornDev/matterhorn) 🏔️
 
+** Read my blog [article](https://www.dasithsblog.com/blog/Etna_a_nodejs_api_boilerplate/) for more info **
+
 - ⏱ Runtime: [Node.js](https://nodejs.org/en/)
 - 🖥 API Framework: [Fastify](https://www.fastify.io/)
 - 🔏 Type System: [TypeScript](https://www.typescriptlang.org/)
