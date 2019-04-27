@@ -18,6 +18,17 @@ An _opinionated_ API Boilerplate project built with [Node.js](https://nodejs.org
 3. 🏃‍♀️ `npm install`
 4. 🏃‍♀️ `npm run dev`
 
+Configurations for database could be made to `.env` file.
+```
+APP_ENV=yourappenv
+DATABASE_HOST=samplehost.com
+DATABASE_USER=sample_user
+DATABASE_PASSWORD=sample_pw
+DATABASE_NAME=sample_db
+DATABASE_PORT=3306
+```
+I have commited the `.env` file for you to get an idea of what the config file looks like but its not recomended that you do commit .env files into the repository.
+
 ## Features
 
 1. Supports authentication with jwt.
@@ -30,7 +41,6 @@ An _opinionated_ API Boilerplate project built with [Node.js](https://nodejs.org
    3. Get distinct list of technologies.
 
 ## Project structure
-
 
 ```
 📂 jest
