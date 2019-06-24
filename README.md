@@ -1,3 +1,6 @@
+[![forthebadge](https://forthebadge.com/images/badges/contains-technical-debt.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/does-not-contain-msg.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/gluten-free.svg)](https://forthebadge.com)
 # Introducing - Etna 🌋
 
 An _opinionated_ API Boilerplate project built with [Node.js](https://nodejs.org/en/), [TypeScript](https://www.typescriptlang.org/) , [objectionjs](https://vincit.github.io/objection.js/), [Knexjs](https://knexjs.org/) - Inspired by and built on top of [Matterhorn](https://github.com/MatterhornDev/matterhorn) 🏔️
