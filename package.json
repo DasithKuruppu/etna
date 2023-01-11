@@ -45,7 +45,7 @@
     "fastify-cors": "^2.1.2",
     "fastify-jwt": "^0.9.6",
     "fastify-swagger": "^2.3.2",
-    "knex": "^0.16.5",
+    "knex": "^2.4.0",
     "mysql": "^2.17.1",
     "objection": "^1.6.8"
   },
